@@ -1,0 +1,99 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #7ba154;
+    color: #5081b6;
+  }
+  
+  /* Header Styles */
+  header {
+    background-color: #0f817a;
+    color: burlywood;
+    padding: 1rem 0;
+    text-align: center;
+  }
+  
+  header nav a {
+    color: rgb(9, 10, 9);
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Section Styles */
+  section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: #9ae0b4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    color: #0b0505;
+  }
+  
+  /* Form Styles */
+  form label {
+    display: block;
+    margin: 10px 0 5px;
+  }
+  
+  form input, form textarea, form button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form button {
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #7ba154;
+  }
+  
+  /* Footer Styles */
+  footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #7ba154;
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+  
+    header nav a {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+
+  button:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s ease;
+  }
+  .dark-mode {
+    background-color: #da88c8;
+    color: #f4f4f9;
+  }
+  
+  .dark-mode section {
+    background-color: #72a0bc;
+    color: white;
+  }
+  
