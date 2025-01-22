@@ -1,24 +1,27 @@
-// Form validation
-document.getElementById("contact-form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const message = document.getElementById("message").value;
-  
-    if (name && email && message) {
-      alert("Thank you for reaching out! I'll get back to you soon.");
-      this.reset(); // Clear form fields
+// Dark Mode Toggle
+function toggleDarkMode() {
+  document.body.classList.toggle('dark-mode');
+}
+
+// Add Fade-in Effect
+window.addEventListener('scroll', () => {
+  const sections = document.querySelectorAll('.section');
+  const triggerHeight = window.innerHeight * 0.8;
+
+  sections.forEach((section) => {
+    const sectionTop = section.getBoundingClientRect().top;
+    if (sectionTop < triggerHeight) {
+      section.style.opacity = 1;
+      section.style.transform = 'translateY(0)';
     } else {
-      alert("Please fill out all fields.");
+      section.style.opacity = 0;
+      section.style.transform = 'translateY(20px)';
     }
   });
+});
 
-  const toggleDarkMode = () => {
-    document.body.classList.toggle("dark-mode");
-  };
-  
-  const darkModeButton = document.createElement("button");
-  darkModeButton.textContent = "Toggle Dark Mode";
-  darkModeButton.onclick = toggleDarkMode;
-  document.body.insertBefore(darkModeButton, document.body.firstChild);
-  
+// Form Submission Alert
+document.getElementById('contact-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Thank you for reaching out!');
+});
